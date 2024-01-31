@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">Romuald Moisan</div>
+    <div>
+      <ul class="menu-liens">
+        <li><a href="#apropos">A propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="presentation">
+    <div class="photoMoi">
+      <img src="./res/photo_accueil.png" alt="Romuald Moisan profile picture" />
+    </div>
+    <div class="section-text">
+      <p class="section-text-p1">Bonjour, Je m'appelle</p>
+      <h1 class="titre">Romuald Moisan</h1>
+      <p class="section-text-p2">Etudiant Ingénieur</p>
+      <div class="contenu-info">
+        <button class="boutonCV" onclick="window.open('./res/resume.pdf')">
+          Download CV
+        </button>
+        <button class="boutonContact" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div class="contenu-social">
+        <img src="./res/linkedin.png" alt="Mon profil LinkedIn" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/romuald-moisan-b55a6b257/'" />
+        <img src="./res/github.png" alt="Mon profil Github" class="icon"
+          onclick="location.href='https://github.com/Azrod64'" />
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>Réalisé par Romuald Moisan</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

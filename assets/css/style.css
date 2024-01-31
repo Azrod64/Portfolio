@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/*HEADER*/
+
+header,
+.menu-liens{
+  display: flex;
+}
+
+header{
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.menu-liens{
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.logo{
+  font-size: 2rem;
+}
+
+/*SECTION PRESENTATION*/
+
+section{
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.presentation{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 60vh;
+}
+.photoMoi{
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section-text{
+  align-self: center;
+  text-align: center;
+}
+
+.section-text p {
+  font-weight: 600;
+}
+
+.section-text-p1 {
+  text-align: center;
+}
+
+.section-text-p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.titre {
+  font-size: 3rem; 
+  text-align: center;
+}
+
+.contenu-social{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.contenu-info{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenu-info button{
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.boutonCV{
+  background: none;
+  border: rgb(53,53,53) 0.1rem solid;
+}
+
+.boutonContact{
+  background: rgb(53, 53, 53);
+  color: white;
+}
