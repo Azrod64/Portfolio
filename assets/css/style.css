@@ -36,6 +36,19 @@ header{
   font-size: 1.5rem;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
 .logo{
   font-size: 2rem;
 }
@@ -120,4 +133,14 @@ section{
 .boutonContact{
   background: rgb(53, 53, 53);
   color: white;
+}
+
+/*FOOTER*/
+footer{
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p{
+  text-align: center;
 }
