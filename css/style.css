@@ -352,9 +352,11 @@ body {
   padding-block: var(--section-padding);
 }
 
-.container {padding-inline: 16px;}
+.container {
+  padding-inline: 16px;
+}
 
-.img-holder  {
+.img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: transparent;
   overflow: hidden;
@@ -390,22 +392,24 @@ body {
  * CHIP
  */
 
-  .chip {
-    height: 32px;
-    max-width: max-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding-inline: 16px;
-    border: 1px solid var(--outline);
-    border-radius: var(--radius-small);
-    background-color: var(--surface);
-    color: var(--on-surface-variant);
-    --state-layer-bg: var(--on-surface-variant)
-  }
+.chip {
+  height: 32px;
+  max-width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 16px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-small);
+  background-color: var(--surface);
+  color: var(--on-surface-variant);
+  --state-layer-bg: var(--on-surface-variant)
+}
 
-  .chip .material-symbols-outlined {font-size: 1.8rem;}
+.chip .material-symbols-outlined {
+  font-size: 1.8rem;
+}
 
 /**
  * CARD
@@ -479,9 +483,13 @@ body {
   border-radius: var(--radius-circle);
 }
 
-.hero-content { max-width: 500px;}
+.hero-content {
+  max-width: 500px;
+}
 
-.hero .section-subtitle {color: var(--on-surface-variant);}
+.hero .section-subtitle {
+  color: var(--on-surface-variant);
+}
 
 .hero .section-text {
   margin-block: 5px 16px;
@@ -508,7 +516,9 @@ body {
   border-radius: var(--radius-large);
 }
 
-.about-card .card-title {color: var(--on-surface);}
+.about-card .card-title {
+  color: var(--on-surface);
+}
 
 .about-card .card-text {
   margin-block: 12px;
@@ -518,7 +528,7 @@ body {
 
 .about-list {
   display: grid;
-  gap:12px;
+  gap: 12px;
 }
 
 .list-item {
