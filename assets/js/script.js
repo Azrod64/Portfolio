@@ -7,6 +7,7 @@
 
 /* Light & dark mode */
 
+/*
 const $themeBtn = document.querySelector("[data-theme-btn]");
 const $HTML = document.documentElement;
 let isDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
@@ -23,7 +24,7 @@ const changeTheme = () => {
 }
 
 $themeBtn.addEventListener("click", changeTheme);
-
+*/
 // TAB
 
 const $tabBtn = document.querySelectorAll("[data-tab-btn]");
