@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2023 codewithsadee
+ * copyright 2024 Azrod64
  */
 
 
@@ -273,7 +273,7 @@ body {
   font-size: var(--body-large);
   font-weight: var(--weight-regular);
   line-height: 24px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.5px;
 }
 
 .body-medium {
@@ -291,21 +291,21 @@ body {
 }
 
 .label-large {
-  font-size: var(--body-large);
+  font-size: var(--label-large);
   font-weight: var(--weight-medium);
   line-height: 20px;
   letter-spacing: 0.1px;
 }
 
 .label-medium {
-  font-size: var(--body-medium);
+  font-size: var(--label-medium);
   font-weight: var(--weight-medium);
   line-height: 16px;
   letter-spacing: 0.5px;
 }
 
 .label-small {
-  font-size: var(--body-small);
+  font-size: var(--label-small);
   font-weight: var(--weight-medium);
   line-height: 16px;
   letter-spacing: 0.5px;
@@ -368,6 +368,14 @@ body {
   object-fit: cover;
 }
 
+.tab-content:not(.active) {
+  display: none;
+}
+
+.section-title {
+  margin-block-end: 16px;
+}
+
 /*-----------------------------------*\
   #COMPONENT
 \*-----------------------------------*/
@@ -387,6 +395,52 @@ body {
  * TAB
  */
 
+.primary-tabs {
+  background-color: var(--background);
+  margin-block-start: 24px;
+  margin-inline: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  border-block-end: 1px solid var(--outline-variant);
+}
+
+.tab-btn {
+  height: 48px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(--surface);
+  color: var(--on-surface-variant);
+  --state-layer-bg: var(--on-surface-variant);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  --state-layer-bg: var(--primary);
+}
+
+.tab-text {
+  position: relative;
+  height: 48px;
+  line-height: 48px;
+}
+
+.tab-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background-color: var(--primary);
+  opacity: 0;
+}
+
+.tab-btn.active .tab-text::after {
+  opacity: 1;
+}
 
 /**
  * CHIP
@@ -415,6 +469,31 @@ body {
  * CARD
  */
 
+.card {
+  background-color: var(--surface-container-low);
+  border-radius: var(--radius-medium);
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  --state-layer-bg: var(--on-surface)
+}
+
+.card-banner {
+  border-radius: var(--radius-medium);
+}
+
+.card-content {
+  display: grid;
+  gap: 4px;
+}
+
+.card-subtitle {
+  color: var(--on-surface-variant);
+}
+
+.card-title {
+  color: var(--on-surface);
+}
 
 /**
  * INPUT FIELD
@@ -543,6 +622,11 @@ body {
   #PROJECT
 \*-----------------------------------*/
 
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
 
 
 
@@ -551,7 +635,44 @@ body {
   #RESUME
 \*-----------------------------------*/
 
+.resume-tab .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-block-end: 28px;
+}
 
+.resume-card {
+  display: grid;
+  gap: 4px;
+}
+
+.resume-card .card-subtitle {
+  color: var(--primary);
+}
+
+.resume-card .card-text {
+  color: var(--on-surface-variant);
+}
+
+.resume-bottom-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.resume-bottom-item {
+  background-color: var(--surface-container);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-small);
+}
+
+.resume-bottom-item .icon {
+  height: 28px;
+}
 
 
 
@@ -567,6 +688,11 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
+.footer .container {
+  text-align: center;
+  padding: 16px;
+  border-block-start: 1px solid var(--outline-variant);
+}
 
 
 
@@ -574,3 +700,65 @@ body {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 768px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: flex-start;
+  }
+
+  .about-card,
+  .primary-tabs {
+    position: sticky;
+    top: 64px;
+  }
+
+  .primary-tabs {
+    z-index: 2;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero .container {
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .article {
+    max-width: 1128px;
+    margin-inline: auto;
+  }
+
+  /**
+   * ABOUT CARD
+   */
+
+  .about-card {
+    margin-inline: 8px;
+  }
+
+  .contact-tab .container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 0.6fr 1fr;
+    gap: 24px;
+  }
+
+}
